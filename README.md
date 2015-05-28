@@ -5,15 +5,13 @@ LLVideoEditor is a library for rotating, cropping and adding layer to your video
 You can use it in conjunction with my other library [LLSimpleCamera][1].
 
 ## Example usage
-
+````
 LLVideoEditor *videoEditor = [[LLVideoEditor alloc] initWithVideoURL:videoURL];
 
 [videoEditor rotate90Degrees];
 [videoEditor crop:CGRectMake(50, 50, 200, 200)];
 [videoEditor addLayer:layer];
-
 ````
-
 Don't forget to run "pod install" to use the included example.
 
 ## Contribution
