@@ -11,13 +11,17 @@ LLVideoEditor *videoEditor = [[LLVideoEditor alloc] initWithVideoURL:videoURL];
 
 // rotate
 [videoEditor rotate:LLRotateDegree90];
+
 // crop
 [videoEditor crop:CGRectMake(10, 10, 300, 200)];
+
 // add layer
 [videoEditor addLayer:layer];
+
 // add audio
 [videoEditor addAudio:audioAsset startingAt:1 trackDuration:3];
 
+// and finally export
 [videoEditor exportToUrl:exportUrl completionBlock:^(AVAssetExportSession *session) {
     
     switch (session.status) {
