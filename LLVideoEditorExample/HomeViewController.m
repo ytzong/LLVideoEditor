@@ -104,49 +104,13 @@
 }
 
 - (void)startCapturing {
-    
     // start recording
     NSURL *outputURL = [[[self applicationDocumentsDirectory]
                          URLByAppendingPathComponent:@"test1"] URLByAppendingPathExtension:@"mov"];
     [self.camera startRecordingWithOutputUrl:outputURL];
     
-    self.snapButton.layer.borderColor = [UIColor colorWithHexString:@"D0021B"].CGColor;
-    self.discLayer.hidden = NO;
-    
-    CGFloat newRadius = 40;
-    
-    CGRect newBounds = CGRectMake(0, 0, 2 * newRadius, 2 * newRadius);
-    UIBezierPath *newPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0,0, 2*newRadius, 2*newRadius)];
-    
-    CABasicAnimation* pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
-    pathAnim.toValue = (id)newPath.CGPath;
-    
-    CABasicAnimation* boundsAnim = [CABasicAnimation animationWithKeyPath:@"bounds"];
-    boundsAnim.toValue = [NSValue valueWithCGRect:newBounds];
-    
-    CAAnimationGroup *anims = [CAAnimationGroup animation];
-    anims.animations = @[boundsAnim, pathAnim];
-    anims.removedOnCompletion = NO;
-    anims.duration = 10.0f;
-    anims.fillMode  = kCAFillModeForwards;
-    
-    [self.discLayer addAnimation:anims forKey:nil];
-    
-    //AudioServicesPlaySystemSound(1117);
-    
-    [UIView animateWithDuration:0.25 animations:^{
-        self.snapButtonBgView.transform = CGAffineTransformMakeScale(1.2, 1.2);
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.snapButtonBgView.transform = CGAffineTransformMakeScale(0.9, 0.9);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.3 animations:^{
-                self.snapButtonBgView.transform = CGAffineTransformIdentity;
-            } completion:^(BOOL finished) {
-                
-            }];
-        }];
-    }];
+    // animate button
+    [self animateButton];
 }
 
 - (void)stopCapturing {
@@ -168,13 +132,22 @@
     NSURL *exportUrl = [[[self applicationDocumentsDirectory]
                          URLByAppendingPathComponent:@"output"] URLByAppendingPathExtension:@"mov"];
     
+    NSURL *audioUrl = [[NSBundle mainBundle] URLForResource:@"applause-01" withExtension:@"mp3"];
+    AVAsset *audioAsset = [[AVURLAsset alloc] initWithURL:audioUrl options:nil];
+    
     CALayer *layer = [self createVideoLayer];
     
+    // initialize the editor
     LLVideoEditor *videoEditor = [[LLVideoEditor alloc] initWithVideoURL:videoURL];
     
-    [videoEditor rotate90Degrees];
-    [videoEditor crop:CGRectMake(50, 50, 200, 200)];
+    // rotate
+    [videoEditor rotate:LLRotateDegree90];
+    // crop
+    [videoEditor crop:CGRectMake(10, 10, 300, 200)];
+    // add layer
     [videoEditor addLayer:layer];
+    // add audio
+    [videoEditor addAudio:audioAsset startingAt:1 trackDuration:3];
     
     [videoEditor exportToUrl:exportUrl completionBlock:^(AVAssetExportSession *session) {
         
@@ -198,10 +171,10 @@
 }
 
 - (CALayer *)createVideoLayer {
-    // a simple red square
+    // a simple red rectangle
     CALayer *layer = [CALayer layer];
     layer.backgroundColor = [UIColor redColor].CGColor;
-    layer.frame = CGRectMake(10, 10, 50, 50);
+    layer.frame = CGRectMake(10, 10, 100, 50);
     return layer;
 }
 
@@ -258,6 +231,45 @@
     }
     
     return _discLayer;
+}
+
+- (void)animateButton {
+    
+    self.snapButton.layer.borderColor = [UIColor colorWithHexString:@"D0021B"].CGColor;
+    self.discLayer.hidden = NO;
+    
+    CGFloat newRadius = 40;
+    
+    CGRect newBounds = CGRectMake(0, 0, 2 * newRadius, 2 * newRadius);
+    UIBezierPath *newPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0,0, 2*newRadius, 2*newRadius)];
+    
+    CABasicAnimation* pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
+    pathAnim.toValue = (id)newPath.CGPath;
+    
+    CABasicAnimation* boundsAnim = [CABasicAnimation animationWithKeyPath:@"bounds"];
+    boundsAnim.toValue = [NSValue valueWithCGRect:newBounds];
+    
+    CAAnimationGroup *anims = [CAAnimationGroup animation];
+    anims.animations = @[boundsAnim, pathAnim];
+    anims.removedOnCompletion = NO;
+    anims.duration = 10.0f;
+    anims.fillMode  = kCAFillModeForwards;
+    
+    [self.discLayer addAnimation:anims forKey:nil];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.snapButtonBgView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.snapButtonBgView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.snapButtonBgView.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
