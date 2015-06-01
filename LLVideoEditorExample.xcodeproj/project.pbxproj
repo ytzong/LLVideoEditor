@@ -179,7 +179,7 @@
 				1744CC0A1B1A41E3001A9045 /* LLVideoData.m */,
 			);
 			path = LLVideoEditor;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		17F97AC31B1260630045633E /* Controllers */ = {
 			isa = PBXGroup;

@@ -40,6 +40,10 @@ LLVideoEditor *videoEditor = [[LLVideoEditor alloc] initWithVideoURL:videoURL];
 ````
 Don't forget to run "pod install" to use the included example.
 
+## Install
+
+pod 'LLVideoEditor', '~> 1.0'
+
 ## Contribution
 This project is very at beginning. I'll try to improve it and add more features. Your contribution is also welcome. Simply send pull requests to the **develop** branch.
 
