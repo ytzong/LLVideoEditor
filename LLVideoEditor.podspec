@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "LLVideEditor"
   s.version      = "1.0.0"
-  s.summary      = "A very simple library to edit videos."
+  s.summary      = "An easy to use library for editing videos"
   s.description  = <<-DESC
-                   LLVideoEditor is a library for rotating, cropping and adding layer to videos and finally exporting them as a new video.
+                   LLVideoEditor is a library for rotating, cropping, adding layers (watermark) and as well as adding audio (music) to the videos.
                    DESC
 
   s.homepage     = "https://github.com/omergul123/LLVideEditor"
