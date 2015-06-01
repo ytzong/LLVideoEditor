@@ -12,12 +12,18 @@
 		170030B71B11F5A200585CEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170030B61B11F5A200585CEB /* Images.xcassets */; };
 		170030BA1B11F5A200585CEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170030B81B11F5A200585CEB /* LaunchScreen.xib */; };
 		170030C61B11F5A300585CEB /* LLVideoEditorExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170030C51B11F5A300585CEB /* LLVideoEditorExampleTests.m */; };
+		1744CBF81B19E871001A9045 /* applause-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1744CBF71B19E871001A9045 /* applause-01.mp3 */; };
+		1744CBFC1B1A24ED001A9045 /* LLRotateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1744CBFB1B1A24ED001A9045 /* LLRotateCommand.m */; };
+		1744CC051B1A3F49001A9045 /* LLCropCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1744CC041B1A3F49001A9045 /* LLCropCommand.m */; };
+		1744CC0B1B1A41E3001A9045 /* LLVideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1744CC0A1B1A41E3001A9045 /* LLVideoData.m */; };
 		17F97ABF1B125B850045633E /* LLVideoEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F97ABE1B125B850045633E /* LLVideoEditor.m */; };
 		17F97AC21B12604D0045633E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F97AC11B12604D0045633E /* HomeViewController.m */; };
 		17F97AC61B126E750045633E /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F97AC51B126E750045633E /* VideoViewController.m */; };
 		17F97ACB1B126FC80045633E /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F97AC81B126FC80045633E /* cancel.png */; };
 		17F97ACC1B126FC80045633E /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F97AC91B126FC80045633E /* cancel@2x.png */; };
 		17F97ACD1B126FC80045633E /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F97ACA1B126FC80045633E /* cancel@3x.png */; };
+		17FD4ECB1B1B930A009166E7 /* LLAddLayerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */; };
+		17FD4ED11B1BB248009166E7 /* LLAddAudioCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */; };
 		662FA662166554732FC2D5D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA7530E0A8255DB47DA9A9E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +48,13 @@
 		170030BF1B11F5A300585CEB /* LLVideoEditorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLVideoEditorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		170030C41B11F5A300585CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		170030C51B11F5A300585CEB /* LLVideoEditorExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLVideoEditorExampleTests.m; sourceTree = "<group>"; };
+		1744CBF71B19E871001A9045 /* applause-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "applause-01.mp3"; sourceTree = "<group>"; };
+		1744CBFA1B1A24ED001A9045 /* LLRotateCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLRotateCommand.h; sourceTree = "<group>"; };
+		1744CBFB1B1A24ED001A9045 /* LLRotateCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLRotateCommand.m; sourceTree = "<group>"; };
+		1744CC031B1A3F49001A9045 /* LLCropCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCropCommand.h; sourceTree = "<group>"; };
+		1744CC041B1A3F49001A9045 /* LLCropCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCropCommand.m; sourceTree = "<group>"; };
+		1744CC091B1A41E3001A9045 /* LLVideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLVideoData.h; sourceTree = "<group>"; };
+		1744CC0A1B1A41E3001A9045 /* LLVideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLVideoData.m; sourceTree = "<group>"; };
 		17F97ABD1B125B850045633E /* LLVideoEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLVideoEditor.h; path = LLVideoEditor/LLVideoEditor.h; sourceTree = SOURCE_ROOT; };
 		17F97ABE1B125B850045633E /* LLVideoEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLVideoEditor.m; path = LLVideoEditor/LLVideoEditor.m; sourceTree = SOURCE_ROOT; };
 		17F97AC01B12604D0045633E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -51,6 +64,10 @@
 		17F97AC81B126FC80045633E /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		17F97AC91B126FC80045633E /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
 		17F97ACA1B126FC80045633E /* cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@3x.png"; sourceTree = "<group>"; };
+		17FD4EC91B1B930A009166E7 /* LLAddLayerCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAddLayerCommand.h; sourceTree = "<group>"; };
+		17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAddLayerCommand.m; sourceTree = "<group>"; };
+		17FD4ECF1B1BB248009166E7 /* LLAddAudioCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAddAudioCommand.h; sourceTree = "<group>"; };
+		17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAddAudioCommand.m; sourceTree = "<group>"; };
 		242DAA5169A01C87AE015614 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CA7530E0A8255DB47DA9A9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EEE3EF13A06B178AE2A9D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +115,7 @@
 		170030A81B11F5A200585CEB /* LLVideoEditorExample */ = {
 			isa = PBXGroup;
 			children = (
+				1744CBF71B19E871001A9045 /* applause-01.mp3 */,
 				17F97AC71B126FC30045633E /* Images */,
 				17F97AC31B1260630045633E /* Controllers */,
 				17F97AB91B125B690045633E /* LLVideoEditor */,
@@ -136,11 +154,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1744CBF91B1A24C5001A9045 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				1744CBFA1B1A24ED001A9045 /* LLRotateCommand.h */,
+				1744CBFB1B1A24ED001A9045 /* LLRotateCommand.m */,
+				1744CC031B1A3F49001A9045 /* LLCropCommand.h */,
+				1744CC041B1A3F49001A9045 /* LLCropCommand.m */,
+				17FD4EC91B1B930A009166E7 /* LLAddLayerCommand.h */,
+				17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */,
+				17FD4ECF1B1BB248009166E7 /* LLAddAudioCommand.h */,
+				17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
 		17F97AB91B125B690045633E /* LLVideoEditor */ = {
 			isa = PBXGroup;
 			children = (
+				1744CBF91B1A24C5001A9045 /* Commands */,
 				17F97ABD1B125B850045633E /* LLVideoEditor.h */,
 				17F97ABE1B125B850045633E /* LLVideoEditor.m */,
+				1744CC091B1A41E3001A9045 /* LLVideoData.h */,
+				1744CC0A1B1A41E3001A9045 /* LLVideoData.m */,
 			);
 			path = LLVideoEditor;
 			sourceTree = "<group>";
@@ -269,6 +305,7 @@
 				17F97ACC1B126FC80045633E /* cancel@2x.png in Resources */,
 				17F97ACB1B126FC80045633E /* cancel.png in Resources */,
 				170030BA1B11F5A200585CEB /* LaunchScreen.xib in Resources */,
+				1744CBF81B19E871001A9045 /* applause-01.mp3 in Resources */,
 				170030B71B11F5A200585CEB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,11 +357,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1744CBFC1B1A24ED001A9045 /* LLRotateCommand.m in Sources */,
+				1744CC0B1B1A41E3001A9045 /* LLVideoData.m in Sources */,
 				17F97AC61B126E750045633E /* VideoViewController.m in Sources */,
 				17F97ABF1B125B850045633E /* LLVideoEditor.m in Sources */,
 				170030AF1B11F5A200585CEB /* AppDelegate.m in Sources */,
 				170030AC1B11F5A200585CEB /* main.m in Sources */,
+				17FD4ED11B1BB248009166E7 /* LLAddAudioCommand.m in Sources */,
 				17F97AC21B12604D0045633E /* HomeViewController.m in Sources */,
+				17FD4ECB1B1B930A009166E7 /* LLAddLayerCommand.m in Sources */,
+				1744CC051B1A3F49001A9045 /* LLCropCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
